@@ -23,7 +23,7 @@ async function main () {
    
    try {
     // await mongoose.connect("mongodb://127.0.0.1:27017/todolistDB", connectionOptions);
-    await mongoose.connect('mongodb://127.0.0.1:27017/InternQuizDB', connectionOptions);
+    await mongoose.connect('mongodb+srv://Kunal_Rawat:tBDn1NKR@cluster0.ocgxfgn.mongodb.net/InternQuizDB', connectionOptions);
     console.log(`Connected to MongoDB`)
    } catch (err) {
     console.log(`Couldn't connect: ${err}`)
