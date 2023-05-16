@@ -1,0 +1,15 @@
+<%-include("partials/header.ejs")-%>
+<h1><%=Title%></h1>
+<form class="form" method="post" action="<%=Title%>/<%=i+1%>">
+            <h3><%=Question%></h5>
+            <input id="01" type="radio" name="btn" value="1" onchange="this.form.submit()">
+            <label for="01">One</label>
+            <input id="02" type="radio" name="btn" value="2" onchange="this.form.submit()">
+            <label for="02">Two</label>
+            <input id="03" type="radio" name="btn" value="3" onchange="this.form.submit()">
+            <label for="03">Three</label>
+            <input id="03" type="radio" name="btn" value="4" onchange="this.form.submit()">
+            <label for="03">Three</label>
+</form>
+
+<%-include("partials/footer.ejs")-%>

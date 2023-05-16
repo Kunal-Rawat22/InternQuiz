@@ -1,0 +1,20 @@
+<%-include("partials/header.ejs")-%>
+<h1><%=Quiz.Title%></h1>
+<form class="form" action="/">
+    <%for(let i=0; i<Quiz.questions.length;i++){%>
+        <% let j= Quiz.questions[i] %>
+        <div class="form-group">
+            <h3><%=i%>) <%=j.Ques%></h5>
+            <input id="O1" type="radio" name="" value="1" >
+            <label for="O1"><%=j.Options[0]%></label>
+            <input id="O2" type="radio" name="r" value="2">
+            <label for="O2"><%=j.Options[1]%></label>
+            <input id="O3" type="radio" name="r" value="3">
+            <label for="O3"><%=j.Options[2]%></label>
+            <input id="O3" type="radio" name="r" value="3">
+            <label for="O3"><%=j.Options[3]%></label>
+        </div>
+        <%}%>
+        <button class="btn btn-primary"type="submit" name="btnMsg2" value="Publish">Submit</button>
+</form>
+<%-include("partials/footer.ejs")-%>

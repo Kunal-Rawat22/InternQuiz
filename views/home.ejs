@@ -1,0 +1,20 @@
+<%-include("partials/header.ejs")-%>
+<% if(flag===1){ %>
+    <h1><%=Page%></h1>
+    <p><%=Content%></p>
+<%}%> 
+<%for(let i=0; i<Quizzes.length;i++){%>
+    <a href="/quizzes/active/<%=Quizzes[i].Title%>"><div class="input__container">
+        <h2><%=Quizzes[i].Title%></h2>
+        <h4 id="SText">Start Timing</h4>
+        <p id="SDate"><%=Quizzes[i].StartDate.date%></p>
+        <p id="STime"><%=Quizzes[i].StartDate.time%></p>
+
+        <h4 id="EText">End Timing</h4>
+        <p id="EDate"><%=Quizzes[i].EndDate.date%></p>
+        <p id="ETime"><%=Quizzes[i].EndDate.time%></p>
+      </div>
+    </a>
+<%}%>
+<%-include("partials/footer.ejs")-%>
+
